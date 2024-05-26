@@ -28,7 +28,7 @@ body {
         padding: 0;
         background-image: linear-gradient(120deg, #FEE3D8 0%, #F2C6D2 25%, #AC6288 75%, #522858 100%);
         height: max-content;
-        
+        overflow-x: hidden;
 
 
     }
