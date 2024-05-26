@@ -1,0 +1,93 @@
+/* Desenvolvido por GAIA Desenvolvimento Web & UX/UI Design / Caio César Faria.  */
+/* * landing page CASA DO VERBO - Página de Await */
+
+
+/*============ DEFINIDNDO VARIÁVEIS RAIZES ==================== */
+:root {
+    --roxo-claro: #522B5B;
+    --roxo-medio: #2B124C;
+    --roxo-escuro: #190019;
+    --rosa-primario: #854F6C;
+    --rosa-secundario: #DFB6B2;
+    --branco-primario: #FEE3D8;
+    --preto-principal: #000;
+    --branco-normal: #fff;
+    --fonte-principal: "Baloo 2", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ! ############  CELULAR 390PX */
+
+@media screen and (max-width: 390px){
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(120deg, #FEE3D8 0%, #F2C6D2 25%, #AC6288 75%, #522858 100%);
+        height: max-content;
+        
+
+
+    }
+    a {
+        color: inherit; /* Herda a cor do elemento pai */
+        text-decoration: none; /* Remove o sublinhado padrão */
+      }
+    .container_aguarde{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin-top: 2rem;
+        margin-left: 40px;
+        margin-right: 40px;
+        justify-content:baseline;
+        color:var(--preto-principal) ;
+        position: relative; 
+        z-index: 1; /* Garante que o texto fique acima da logo */
+    }
+    .container_aguarde::before {
+        content: ""; /* Conteúdo vazio para o pseudo-elemento */
+        background-image: url("./backgroundicon.png"); /* Substitua pelo caminho da sua logo */
+        background-size: contain; /* Ajusta a logo para caber no container */
+        background-repeat: no-repeat; /* Impede a repetição da logo */
+        opacity: 0.7; /* Define a opacidade da logo (ajuste conforme necessário) */
+        position: absolute;
+        
+        top: 20vw;
+        left: 30vw;
+        width: 90%;
+        height: 100%;
+        z-index: -1; /* Coloca a logo atrás do conteúdo do container */
+      }
+    .container_aguarde p, .container_aguarde h2, .container_aguarde h3{
+        font-size: 18px;
+        font-family: var(--fonte-principal);
+    }
+    .container_aguarde h3{
+        font-weight: normal;
+        font-style: italic;
+    }
+    .container_contato{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        margin-left: 30vw;
+        
+    }
+    .container_instagram, .container_whatsapp,.container_email{
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        
+    }
+    .container_instagram p, .container_whatsapp p,.container_email p{
+        font-size: 16px;
+    }
+    .container_rodape img{
+        width: 100vw;
+        
+    }
+}
